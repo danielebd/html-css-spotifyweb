@@ -1,0 +1,23 @@
+/**************************** 
+DEBUG
+*****************************/
+/* header */
+header {
+    height: 90px;
+}
+/* main */
+.box {
+    height: 18.75rem;
+    background-color: bisque;
+    border: solid;
+}
+.box-container {
+    background-color: aquamarine;
+}
+.boxs {
+    background-color: yellow;
+}
+
+/**************************** 
+DEBUG
+*****************************/

@@ -1,3 +1,5 @@
+@import url('debug.css');
+
 * {
     padding: 0;
     margin: 0;
@@ -11,20 +13,27 @@ COMMON
 .flex {
     display: flex;
 }
+.container {
+    max-width: 90rem;
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-sb {
+    display: flex;
+    justify-content: space-between;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 /**************************** 
 COMMON
 *****************************/
 
 
-/**************************** 
-DEBUG
-*****************************/
-header {
-    height: 90px;
-}
-/**************************** 
-DEBUG
-*****************************/
 
 
 /**************************** 
@@ -34,7 +43,13 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
-    z-index: 1;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.button {
+    justify-content: end;
 }
 /**************************** 
 HEADER
@@ -45,6 +60,82 @@ HEADER
 MAIN
 *****************************/
 
+/* sidebar */
+.sidebar {
+    width: 3.125rem;
+    max-height: 100%;
+    background-color: aqua;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 5.625rem;
+    align-items: center;
+}
+.playlist {
+    display: none;
+}
+.bottom-sidebar {
+    position: fixed;
+    bottom: 5.625rem;
+}
+/* sidebar */
+/* content */
+.content {
+    width: 100%;
+    padding-top: 5.625rem;
+    padding-left: 3.75rem;
+    padding-right: 1.875rem;
+    padding-bottom: 5.625rem;
+}
+.content nav {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 3.4375rem;
+    padding: 0 -0.625rem;
+}
+.content nav div {
+    padding: 0 0.625rem;
+    display: inline-block;
+}
+h1 {
+    padding-left: 0.625rem;
+}
+.boxs {
+    padding: 1.25rem  0;
+    
+}
+.box-container {
+    width: calc(100% / 2 - .625rem);
+    padding: 0 .625rem;
+}
+.box {
+    width: 100%;    
+}
+/* content */
+
+@media screen and (min-width: 552px) {
+    .sidebar {
+        width: 14.375rem;
+        align-items: flex-start;
+    }
+    .content {
+        padding-left: 15.625rem;
+    }
+    .sidebar section {
+        display: block;
+    }
+}
+@media screen and (min-width:640px){
+    .box-container {
+        width: calc(100% / 4 - .625rem);
+    }
+}
+@media screen and (min-width:878px){
+    .box-container {
+        width: calc(100% / 6 - .625rem);
+    }
+}
 /**************************** 
 MAIN
 *****************************/
@@ -53,7 +144,18 @@ MAIN
 /**************************** 
 FOOTER
 *****************************/
-
+footer {
+    height: 5.625rem;
+    width: 100%;
+    background-color: brown;
+    position: fixed;
+    
+    align-items: flex-end;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
 /**************************** 
 FOOTER
 *****************************/
