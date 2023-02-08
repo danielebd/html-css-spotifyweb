@@ -63,7 +63,7 @@ MAIN
 /* sidebar */
 .sidebar {
     width: 3.125rem;
-    max-height: 100%;
+    max-height: calc(100% - 5.625rem);
     background-color: aqua;
     position: fixed;
     z-index: 1;
@@ -75,10 +75,15 @@ MAIN
 .playlist {
     display: none;
 }
+.playlist ul{
+    height: calc(100% - 90px);
+    overflow: auto;
+}
 .bottom-sidebar {
     position: fixed;
     bottom: 5.625rem;
 }
+
 /* sidebar */
 /* content */
 .content {
@@ -89,6 +94,7 @@ MAIN
     padding-bottom: 5.625rem;
 }
 .content nav {
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     line-height: 3.4375rem;
@@ -103,11 +109,15 @@ h1 {
 }
 .boxs {
     padding: 1.25rem  0;
+    width: 100%;
     
 }
+.played {
+    width: 100%;
+}
 .box-container {
-    width: calc(100% / 2 - .625rem);
-    padding: 0 .625rem;
+    width: calc(100% / 2);
+    padding: .3125rem .625rem;
 }
 .box {
     width: 100%;    
@@ -128,12 +138,12 @@ h1 {
 }
 @media screen and (min-width:640px){
     .box-container {
-        width: calc(100% / 4 - .625rem);
+        width: calc(100% / 4);
     }
 }
 @media screen and (min-width:878px){
     .box-container {
-        width: calc(100% / 6 - .625rem);
+        width: calc(100% / 6);
     }
 }
 /**************************** 
