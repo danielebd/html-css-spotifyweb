@@ -148,17 +148,18 @@ i {
     align-items: center;
 }
 .bottom-sidebar div:first-child {
-    padding: .625rem 0;
-    
+    padding: .625rem 0; 
 }
 .id {
     border-top: solid grey .0625rem;
     padding-top: .625rem;
     color: white;
     width: 100%;
+    justify-content: center;
 }
 .id i {
     font-size: x-large;
+
 }
 
 /* SIDEBAR */
@@ -199,7 +200,7 @@ h1 {
 }
 /* content */
 
-@media screen and (min-width: 552px) {
+@media screen and (min-width: 553px) {
     
     .sidebar {
         width: 14.375rem;
@@ -249,12 +250,12 @@ h1 {
 
 
 }
-@media screen and (min-width:640px){
+@media screen and (min-width:641px){
     .box-container {
         width: calc(100% / 4);
     }
 }
-@media screen and (min-width:878px){
+@media screen and (min-width:879px){
     .box-container {
         width: calc(100% / 6);
     }
@@ -270,15 +271,69 @@ FOOTER
 footer {
     height: 5.625rem;
     width: 100%;
-    background-color: brown;
+    background-color: #282828;
     position: fixed;
-    
-    align-items: flex-end;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 1;
+    color: white;
 }
+.footcent, .footleft, .footright {
+    align-items: center; 
+}
+footer > div {
+    width: calc(100% / 3);
+}
+/* .footleft, .footright {
+    width: 30%;
+}
+.footcent {
+    flex-grow: 1;
+} */
+/* FOOTER SINISTRA *************/
+.footleft img {
+    width: 100%;
+    
+}
+.footleft > div:first-child {
+    width: 30px;
+    margin: 0 .625rem;
+}
+.footleft div:nth-child(2) {
+    font-size: .8125rem;
+    display: inline-block;
+}
+.footleft > div > div:last-child {
+    color: grey;
+    font-size: .8125rem;
+}
+.footleft > div:last-child {
+    padding-left: .9375rem;
+}
+.footleft i {
+    color: grey;
+    display: block;
+}
+@media screen and (min-width: 553px) {
+    .footleft > div:first-child {
+        width: 40px;
+    }
+}
+@media screen and (min-width:641px){
+    
+}
+@media screen and (min-width:879px){
+    .footleft div:nth-child(2) {
+        padding-right: 1.5rem;
+    }
+    .footleft i {
+        display: inline-block;
+        padding: 0 .3125rem;
+    }
+}
+/* FOOTER SINISTRA ************/
+
 /**************************** 
 FOOTER
 *****************************/

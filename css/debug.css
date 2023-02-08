@@ -17,7 +17,12 @@ header {
 .boxs {
     background-color: yellow;
 }
-
+.footleft, .footright {
+    background-color: red;
+} 
+.footcent {
+    background-color: aqua;
+}
 /**************************** 
 DEBUG
 *****************************/
