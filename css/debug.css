@@ -18,10 +18,10 @@ header {
     background-color: yellow;
 }
 .footleft, .footright {
-    background-color: red;
+    background-color: #16a52e;
 } 
 .footcent {
-    background-color: aqua;
+    background-color: #ce1111;
 }
 /**************************** 
 DEBUG
