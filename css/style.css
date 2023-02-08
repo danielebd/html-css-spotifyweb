@@ -10,6 +10,16 @@
 /**************************** 
 COMMON
 *****************************/
+::-webkit-scrollbar {
+    width: .625rem;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    width: .625rem;
+    background-color: grey;
+    border-radius: 0.625rem;
+}
+
 .flex {
     display: flex;
 }
@@ -26,9 +36,18 @@ COMMON
 }
 .column {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column;   
 }
+.none {
+    display: none;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
 /**************************** 
 COMMON
 *****************************/
@@ -60,31 +79,66 @@ HEADER
 MAIN
 *****************************/
 
-/* sidebar */
+/* SIDEBAR */
+/* TOP SIDEBAR */
 .sidebar {
     width: 3.125rem;
-    max-height: calc(100% - 5.625rem);
-    background-color: aqua;
+    height: calc(100%-90px);
+    background-color: black;
+    color: grey;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     bottom: 5.625rem;
+    align-items: center; 
+}
+.top-sidebar {
+    width: 100%;
     align-items: center;
+    gap: .9375rem;
+}
+.icon-sidebar i {
+    font-size: 1.5625rem;
+}
+.top-sidebar > div:nth-child(2), .top-sidebar div:nth-child(5) {
+    color: white;
+}
+.top-sidebar div:nth-child(5) {
+    padding-top: .9375rem;
 }
 .playlist {
-    display: none;
+    gap: 1.25rem;
 }
-.playlist ul{
-    height: calc(100% - 90px);
-    overflow: auto;
+i {
+    padding: .3125rem 0;
 }
-.bottom-sidebar {
-    position: fixed;
-    bottom: 5.625rem;
+.top-sidebar .flex, .bottom-sidebar div {
+    align-items: center;
+}
+.fa-square-plus {
+    font-size: 2.5rem;
 }
 
-/* sidebar */
+/* BOTTOM SIDEBAR */
+.bottom-sidebar {
+    margin-top: auto;
+    padding-bottom: 0.625rem;
+    width: 100%;
+}
+.bottom-sidebar div:first-child {
+    padding: .625rem 0;
+}
+.id {
+    border-top: solid grey .0625rem;
+    padding-top: .625rem;
+    color: white;
+}
+.id i {
+    font-size: x-large;
+}
+
+/* SIDEBAR */
 /* content */
 .content {
     width: 100%;
@@ -112,9 +166,7 @@ h1 {
     width: 100%;
     
 }
-.played {
-    width: 100%;
-}
+
 .box-container {
     width: calc(100% / 2);
     padding: .3125rem .625rem;
@@ -128,13 +180,42 @@ h1 {
     .sidebar {
         width: 14.375rem;
         align-items: flex-start;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
     .content {
         padding-left: 15.625rem;
     }
-    .sidebar section {
-        display: block;
+    .none {
+        display: inline-block;
     }
+    .top-sidebar{
+        align-items: flex-start;
+        padding-bottom: 1.25rem;
+    }
+    .playlist {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; 
+        overflow: auto;
+        width: 100%;
+    }
+    .logo {
+        align-items: center;
+        line-height: 5.625rem;
+        color: white;
+    }
+    .logo span {
+        font-size: 1.5625rem;
+    }
+    .fa-spotify {
+        font-size: 2.5rem;
+    }
+    .sidebar i {
+        padding: 0 0;
+    }
+
+
 }
 @media screen and (min-width:640px){
     .box-container {
