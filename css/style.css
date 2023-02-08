@@ -62,13 +62,27 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
-    
     left: 0;
     right: 0;
     top: 0;
+/*     height: 90px;*/
+}
+header > div {
+    height: 100%;
 }
 .button {
     justify-content: end;
+    align-items: center;
+    height: 100%;
+    padding: 1.25rem 0.625rem;
+
+}
+.button button {
+    padding: .9375rem 1.875rem;
+    background-color: transparent;
+    color: white;
+    border: solid white;
+    border-radius: 1.875rem;
 }
 /**************************** 
 HEADER
@@ -97,12 +111,18 @@ MAIN
     width: 100%;
     align-items: center;
     gap: .9375rem;
+    padding-top: .9375rem;
 }
 .icon-sidebar i {
     font-size: 1.5625rem;
 }
-.top-sidebar > div:nth-child(2), .top-sidebar div:nth-child(5) {
+.top-sidebar > div:nth-child(2), 
+.top-sidebar div:nth-child(5),
+.top-sidebar > div:first-child  {
     color: white;
+}
+.top-sidebar > div:first-child i {
+    font-size: 1.875rem;
 }
 .top-sidebar div:nth-child(5) {
     padding-top: .9375rem;
@@ -125,14 +145,17 @@ i {
     margin-top: auto;
     padding-bottom: 0.625rem;
     width: 100%;
+    align-items: center;
 }
 .bottom-sidebar div:first-child {
     padding: .625rem 0;
+    
 }
 .id {
     border-top: solid grey .0625rem;
     padding-top: .625rem;
     color: white;
+    width: 100%;
 }
 .id i {
     font-size: x-large;
@@ -177,12 +200,14 @@ h1 {
 /* content */
 
 @media screen and (min-width: 552px) {
+    
     .sidebar {
         width: 14.375rem;
         align-items: flex-start;
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
+    /* top sidebar */
     .content {
         padding-left: 15.625rem;
     }
@@ -192,6 +217,7 @@ h1 {
     .top-sidebar{
         align-items: flex-start;
         padding-bottom: 1.25rem;
+        padding-top: 0;
     }
     .playlist {
         display: flex;
@@ -214,6 +240,12 @@ h1 {
     .sidebar i {
         padding: 0 0;
     }
+    /* top sidebar */
+    /* bottom sider bar */
+    .bottom-sidebar {
+        align-items: flex-start;
+    }
+    /* bottom sider bar */
 
 
 }
