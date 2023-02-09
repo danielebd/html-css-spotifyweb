@@ -17,12 +17,12 @@ header {
 .boxs {
     background-color: yellow;
 }
-.footleft, .footright {
+/* .footleft, .footright {
     background-color: #16a52e;
 } 
 .footcent {
     background-color: #ce1111;
-}
+} */
 /**************************** 
 DEBUG
 *****************************/
