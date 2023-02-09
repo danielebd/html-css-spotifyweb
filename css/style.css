@@ -23,9 +23,6 @@ COMMON
 .flex {
     display: flex;
 }
-.container {
-    max-width: 90rem;
-}
 .wrap {
     display: flex;
     flex-wrap: wrap;
@@ -61,11 +58,11 @@ HEADER
 header {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
-    width: 100%;
+    max-width: 100%;
     left: 0;
     right: 0;
     top: 0;
-/*     height: 90px;*/
+    z-index: 1;
 }
 header > div {
     height: 100%;
@@ -92,20 +89,17 @@ HEADER
 /**************************** 
 MAIN
 *****************************/
-
+main {
+    height: calc(100vh - 90px);
+}
 /* SIDEBAR */
 /* TOP SIDEBAR */
 .sidebar {
-    width: 3.125rem;
-    height: calc(100%-90px);
+    width: 50px;
+    overflow: hidden;
     background-color: black;
     color: grey;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    bottom: 5.625rem;
-    align-items: center; 
+    align-items: center;
 }
 .top-sidebar {
     width: 100%;
@@ -165,11 +159,11 @@ i {
 /* SIDEBAR */
 /* content */
 .content {
+    background-color: #141922;
     width: 100%;
+    overflow: auto;
     padding-top: 5.625rem;
-    padding-left: 3.75rem;
-    padding-right: 1.875rem;
-    padding-bottom: 5.625rem;
+    color: white;
 }
 .content nav {
     width: 100%;
@@ -201,17 +195,18 @@ h1 {
 /* content */
 
 @media screen and (min-width: 553px) {
-    
+
+    header {
+        left: 14.375rem;
+    }
     .sidebar {
-        width: 14.375rem;
+        width: 230px;
         align-items: flex-start;
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
     /* top sidebar */
-    .content {
-        padding-left: 15.625rem;
-    }
+
     .none {
         display: inline-block;
     }
@@ -219,6 +214,9 @@ h1 {
         align-items: flex-start;
         padding-bottom: 1.25rem;
         padding-top: 0;
+    }
+    .top-sidebar div:nth-child(6) {
+        display: flex;
     }
     .playlist {
         display: flex;
@@ -272,11 +270,6 @@ footer {
     height: 5.625rem;
     width: 100%;
     background-color: #282828;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
     color: white;
 }
 .footcent, .footleft, .footright {
