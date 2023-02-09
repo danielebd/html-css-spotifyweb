@@ -4,7 +4,17 @@
     width: 100%;
     overflow-y: auto;
     padding-top: 5.625rem;
+    color: grey;
+}
+h1, p {
+    padding-left: 0.625rem;
+}
+h3,h1 {
     color: white;
+}
+p {
+    font-size: 0.625rem;
+    padding-top: .3125rem;
 }
 /* nav ***************************************** */
 .content nav {
@@ -19,21 +29,16 @@
     padding: 0 0.625rem;
     display: inline-block;
 }
-
-h1 {
-    padding-left: 0.625rem;
-}
 /* nav ***************************************** */
 /* box ***************************************** */
 .boxs {
     padding: 1.25rem  0;
     width: 100%;
-    
 }
 
 .box-container {
     width: calc(100% / 2);
-    padding: .3125rem .625rem;
+    padding: .3125rem .4688rem;
 }
 
 .box {
@@ -41,11 +46,17 @@ h1 {
 }
 
 .box img {
-    width: 100%;    
+    width: 100%; 
+    display: block;   
+}
+.content section:last-child img {
+    border-radius: 100%;
 }
 .album-title {
     width: 100%;
     text-align: center;
+    padding: 1.25rem 0;
+    line-height: 1.25rem;
 }
 /* box ***************************************** */
 @media screen and (min-width:641px){
