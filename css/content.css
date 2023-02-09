@@ -107,6 +107,8 @@ nav > div:hover > hr {
 }
 .box > div {
     position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .box img {
@@ -122,8 +124,8 @@ nav > div:hover > hr {
     display: block;
     font-size: 40px;
      
-    left: 35%;
-    top: 35%;
+/*     left: 35%;
+    top: 35%; */
 }
 .box div:hover img {
     opacity: 0.5; 

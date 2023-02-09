@@ -41,6 +41,9 @@ COMMON
 a {
     text-decoration: none;
 }
+a:hover {
+    color: white;
+}
 div {
     font-size: 12px;
 }
@@ -87,6 +90,9 @@ main {
 .icon-sidebar i {
     font-size: 1.5625rem;
 }
+.top-sidebar > div:nth-child(2) {
+    border-left: solid #adff2f;
+}
 .top-sidebar > div:nth-child(2), 
 .top-sidebar div:nth-child(5),
 .top-sidebar > div:first-child  {
@@ -99,14 +105,14 @@ main {
     padding-top: .9375rem;
 }
 .logo {
-    padding: 10px 0;
-    width: 30px;
+    padding: 0.625rem 0;
+    width: 1.875rem;
 }
 .logo img {
     width: 100%;
 }
 .i {
-    width: 25px;
+    width: 2.1875rem;
 }
 .i img {
     width: 60%;
@@ -240,9 +246,6 @@ footer {
 .footcent, .footleft, .footright {
     align-items: center; 
 }
-/* footer > div {
-    width: calc(100% / 3);
-} */
 .footleft, .footright {
     width: 30%;
     padding: 1.25rem 0;
@@ -251,6 +254,10 @@ footer {
 .footcent {
     flex-grow: 1;
     min-width: 200px;
+}
+
+footer i:hover, .footleft a:hover {
+    color: white;
 }
 /* FOOTER SINISTRA *************/
 .footleft img {
@@ -313,34 +320,78 @@ footer {
     
 }
 /* ICONE CENTRALI */
-.footcent i:nth-child(3) {
+/* .footcent i:nth-child(3) {
     padding: 0 1.875rem;
     font-size: 1.875rem;
-}
-.footcent i:nth-child(2) {
+} */
+/* .footcent > i:nth-child(2) {
     padding-left: 1.25rem;
     font-size: 1.25rem; 
 }
-.footcent i:nth-child(4) {
+.footcent > i:nth-child(3) {
     padding-right: 1.25rem;
-}
-.footcent i:nth-child(1), .footcent i:nth-child(5) {
+} */
+/* .footcent > i:nth-child(1),
+ .footcent i:nth-child(4) {
     font-size: 1.25rem; 
+} */
+.footcent > div:first-child {
+    gap: 15px;
 }
+.footcent i {
+    font-size: 15px;
+}
+#play {
+    width: 40px;
+    height: 20px;
+    text-align: center;
+}
+#play i {
+    line-height: 20px;
+    font-size: 25px;
+}
+#play:hover i {
+    font-size: 30px;
+}
+
+
 /* ICONE CENTRALI */
 
 /* BARRA CENTRALE */
 .bar {
     flex-grow: 0.7;
-    height: 7px;
+    height: 3px;
     background-color: grey;
     border-radius: .625rem;
 }
-.bar div {
+.bar, .bar-right {
+    align-items: center;
+}
+.bar div:first-child {
     width: 20%;
-    height: .4375rem;
+    height: 3px;
     background-color: lightgray;
     border-radius: .625rem;
+    text-align: end;
+}
+
+.bar div:last-child {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50px;
+    display: none;
+}
+.bar:hover div:last-child {
+    display: block;
+}
+
+.bar-right:hover div:last-child {
+    display: block;
+}
+.bar:hover div:first-child, 
+.bar-right:hover div:first-child {
+    background-color: #adff2f;
 }
 /* BARRA CENTRALE */
 @media screen and (min-width: 553px) {
@@ -373,15 +424,22 @@ footer {
 .bar-right {
     width: 5.3125rem;
     flex-grow: 0.1;
-    height: 7px;
+    height: 3px;
     background-color: grey;
     border-radius: .625rem;
 }
 .bar-right div {
     width: 20%;
-    height: .4375rem;
+    height: 3px;
     background-color: lightgray;
     border-radius: .625rem;
+}
+.bar-right div:last-child {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50px;
+    display: none;
 }
 /* FOOTER DESTRA **************/
 
