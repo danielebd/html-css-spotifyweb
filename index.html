@@ -21,14 +21,23 @@
     <!-- header -->
     <!-- main -->
     <main class="flex">
-        
         <!-- SIDEBAR -->
         <section class="sidebar column">
             <div class="top-sidebar column">
-                <div class="flex logo"><i class="fa-brands fa-spotify"></i><span class="none">&nbsp;Spotify</span></div>
-                <div class="flex icon-sidebar"><i class="fa-solid fa-house"></i><span class="none">&nbsp;Home</span></div>
-                <div class="flex icon-sidebar"><i class="fa-solid fa-magnifying-glass"></i><span class="none">&nbsp;Cerca</span></div>
-                <div class="flex icon-sidebar"><i class="fa-solid fa-bars"></i><span class="none">&nbsp;La tua libreria</span></div>
+                <div class="flex logo"><img class="logo-small" src="img/logo-small.svg" alt=""><img class="none" src="img/logo.svg" alt=""></div>
+                <!-- <div class="flex logo"><i class="fa-brands fa-spotify"></i><span class="none"><img src="img/logo.svg" alt=""></span></div> -->
+                <div class="flex icon-sidebar">
+                    <div class="i"><img src="img/home.svg" alt="">
+                    </div><span class="none">&nbsp;Home</span>
+                </div>
+                <div class="flex icon-sidebar">
+                    <div class="i"><img src="img/search.svg" alt=""></div>
+                    <span class="none">&nbsp;Cerca</span>
+                </div>
+                <div class="flex icon-sidebar">
+                    <div class="i"><img src="img/libreria.svg" alt=""></div>
+                    <span class="none">&nbsp;La tua libreria</span>
+                </div>
                 <div class="none">PLAYLIST</div>
                 <div class="none"><i class="fa-sharp fa-solid fa-square-plus"></i><div class="none">&nbsp;Crea playlist</div></div>
             </div>
@@ -40,8 +49,15 @@
                 <li>Nome Playlist</li>
             </ul>
             <div class="bottom-sidebar column">
-                <div><i class="fa-regular fa-circle-down"></i><div class="none">&nbsp;Installa app</div></div>
-                <div class="flex id"><i class="fa-solid fa-circle-user"></i><span class="none">&nbsp;John Doe</span></div>
+                <div><i class="fa-regular fa-circle-down"></i><div class="none">
+                    &nbsp;&nbsp;Installa app</div></div>
+                <div class="flex id">
+                    <div class="img-container"></div>
+                    <div class="i">
+                        <img src="img/profile.svg" alt="">
+                    </div>
+                    <span class="none">&nbsp;&nbsp;&nbsp;john Doe</span>
+                </div>
             </div>
         </section>
         <!-- SIDEBAR -->
@@ -78,22 +94,38 @@
                 <h1>Recently Played</h1>
                 <div class="boxs wrap">
                     <div class="box-container">
-                        <div class="box"></div>
+                        <div class="box">
+                            <div><img src="img/album/metal_lifting.jpg" alt=""></div>
+                            <section class="album-title">
+                                <h4>Heavy Metal</h4>
+                                <div>ahahah</div>
+                            </section>
+                        </div>
                     </div>
                     <div class="box-container">
-                        <div class="box"></div>
+                        <div class="box">
+                            <img src="img/album/stranger.jpeg" alt="">
+                        </div>
                     </div>
                     <div class="box-container">
-                        <div class="box"></div>
+                        <div class="box">
+                            <img src="img/album/aquietplace.jpeg" alt="">
+                        </div>
                     </div>
                     <div class="box-container">
-                        <div class="box"></div>
+                        <div class="box">
+                            <img src="img/album/split.jpeg" alt="">
+                        </div>
                     </div>
                     <div class="box-container">
-                        <div class="box"></div>
+                        <div class="box">
+                            <img src="img/album/cure.jpeg" alt="">
+                        </div>
                     </div>
                     <div class="box-container">
-                        <div class="box"></div>
+                        <div class="box">
+                            <img src="img/sinister.jpeg" alt="">
+                        </div>
                     </div>
                 </div>
             </section>

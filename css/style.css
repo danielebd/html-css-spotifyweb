@@ -1,5 +1,5 @@
+@import url('content.css');
 @import url('debug.css');
-
 * {
     padding: 0;
     margin: 0;
@@ -11,11 +11,11 @@
 COMMON
 *****************************/
 ::-webkit-scrollbar {
-    width: .625rem;
+    width: .3125rem;
     background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    width: .625rem;
+    width: .3125rem;
     background-color: grey;
     border-radius: 0.625rem;
 }
@@ -44,6 +44,12 @@ li {
 a {
     text-decoration: none;
 }
+div {
+    font-size: 12px;
+}
+li {
+    font-size: .8125rem;
+}
 
 /**************************** 
 COMMON
@@ -59,7 +65,7 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     max-width: 100%;
-    left: 0;
+    left: 3.125rem;
     right: 0;
     top: 0;
     z-index: 1;
@@ -91,20 +97,23 @@ MAIN
 *****************************/
 main {
     height: calc(100vh - 90px);
+    flex-shrink: 0;
 }
 /* SIDEBAR */
 /* TOP SIDEBAR */
 .sidebar {
     width: 50px;
-    overflow: hidden;
+    overflow-y: hidden;
     background-color: black;
     color: grey;
     align-items: center;
+    min-height: 100px;
+    flex-shrink: 0;
 }
 .top-sidebar {
     width: 100%;
     align-items: center;
-    gap: .9375rem;
+    gap: .625rem;
     padding-top: .9375rem;
 }
 .icon-sidebar i {
@@ -121,11 +130,21 @@ main {
 .top-sidebar div:nth-child(5) {
     padding-top: .9375rem;
 }
+.logo {
+    padding: 10px 0;
+    width: 30px;
+}
+.logo img {
+    width: 100%;
+}
 .playlist {
     gap: 1.25rem;
 }
-i {
-    padding: .3125rem 0;
+.i {
+    width: 25px;
+}
+.i img {
+    width: 100%;
 }
 .top-sidebar .flex, .bottom-sidebar div {
     align-items: center;
@@ -144,6 +163,10 @@ i {
 .bottom-sidebar div:first-child {
     padding: .625rem 0; 
 }
+.bottom-sidebar .i {
+    border: solid white;
+    width: 0.625rem;
+}
 .id {
     border-top: solid grey .0625rem;
     padding-top: .625rem;
@@ -158,40 +181,7 @@ i {
 
 /* SIDEBAR */
 /* content */
-.content {
-    background-color: #141922;
-    width: 100%;
-    overflow: auto;
-    padding-top: 5.625rem;
-    color: white;
-}
-.content nav {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 3.4375rem;
-    padding: 0 -0.625rem;
-}
-.content nav div {
-    padding: 0 0.625rem;
-    display: inline-block;
-}
-h1 {
-    padding-left: 0.625rem;
-}
-.boxs {
-    padding: 1.25rem  0;
-    width: 100%;
-    
-}
 
-.box-container {
-    width: calc(100% / 2);
-    padding: .3125rem .625rem;
-}
-.box {
-    width: 100%;    
-}
 /* content */
 
 @media screen and (min-width: 553px) {
@@ -215,8 +205,17 @@ h1 {
         padding-bottom: 1.25rem;
         padding-top: 0;
     }
+    .logo {
+        padding: 20px 0;
+        width: 130px;
+    }
+    .logo-small {
+        display: none;
+    }
+    
     .top-sidebar div:nth-child(6) {
         display: flex;
+        align-items: center;
     }
     .playlist {
         display: flex;
@@ -225,17 +224,17 @@ h1 {
         overflow: auto;
         width: 100%;
     }
-    .logo {
+    /* .logo {
         align-items: center;
         line-height: 5.625rem;
         color: white;
-    }
-    .logo span {
+    } */
+    /* .logo span {
         font-size: 1.5625rem;
     }
     .fa-spotify {
         font-size: 2.5rem;
-    }
+    } */
     .sidebar i {
         padding: 0 0;
     }
@@ -244,20 +243,14 @@ h1 {
     .bottom-sidebar {
         align-items: flex-start;
     }
+    .id {
+        justify-content: flex-start;
+    }
     /* bottom sider bar */
 
 
 }
-@media screen and (min-width:641px){
-    .box-container {
-        width: calc(100% / 4);
-    }
-}
-@media screen and (min-width:879px){
-    .box-container {
-        width: calc(100% / 6);
-    }
-}
+
 /**************************** 
 MAIN
 *****************************/
@@ -333,8 +326,8 @@ footer {
     justify-content: center;
     gap: .625rem;
 }
-.footcent > div {
-    width: 70%;
+.footcent > div:first-child {
+    align-items: center;
 }
 .footcent > div {
     justify-content: center;
