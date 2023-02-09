@@ -38,9 +38,6 @@ COMMON
 .none {
     display: none;
 }
-li {
-    list-style: none;
-}
 a {
     text-decoration: none;
 }
@@ -49,6 +46,8 @@ div {
 }
 li {
     font-size: .8125rem;
+    list-style: none;
+    padding: 0.625rem 0;
 }
 
 /**************************** 
@@ -58,38 +57,7 @@ COMMON
 
 
 
-/**************************** 
-HEADER
-*****************************/
-header {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    max-width: 100%;
-    left: 3.125rem;
-    right: 0;
-    top: 0;
-    z-index: 1;
-}
-header > div {
-    height: 100%;
-}
-.button {
-    justify-content: end;
-    align-items: center;
-    height: 100%;
-    padding: 1.25rem 0.625rem;
 
-}
-.button button {
-    padding: .9375rem 1.875rem;
-    background-color: transparent;
-    color: white;
-    border: solid white;
-    border-radius: 1.875rem;
-}
-/**************************** 
-HEADER
-*****************************/
 
 
 /**************************** 
@@ -137,14 +105,11 @@ main {
 .logo img {
     width: 100%;
 }
-.playlist {
-    gap: 1.25rem;
-}
 .i {
     width: 25px;
 }
 .i img {
-    width: 100%;
+    width: 60%;
 }
 .top-sidebar .flex, .bottom-sidebar div {
     align-items: center;
@@ -163,9 +128,17 @@ main {
 .bottom-sidebar div:first-child {
     padding: .625rem 0; 
 }
-.bottom-sidebar .i {
-    border: solid white;
+.img-container {
     width: 0.625rem;
+    border: solid white;
+}
+.bottom-sidebar .i {
+    width: 40px;
+    height: 40px;
+    border: solid white 1px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: grey;
 }
 .id {
     border-top: solid grey .0625rem;
@@ -176,7 +149,6 @@ main {
 }
 .id i {
     font-size: x-large;
-
 }
 
 /* SIDEBAR */
@@ -275,6 +247,7 @@ footer {
     width: 30%;
     padding: 1.25rem 0;
 }
+
 .footcent {
     flex-grow: 1;
     min-width: 200px;
@@ -414,4 +387,16 @@ footer {
 
 /**************************** 
 FOOTER
+*****************************/
+
+
+/**************************** 
+:HOVER
+*****************************/
+.sidebar div div:hover, .sidebar li:hover {
+    color: white;
+}
+
+/**************************** 
+:HOVER
 *****************************/
